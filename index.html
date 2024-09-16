@@ -92,7 +92,7 @@ permissions and limitations under the License.
                             <!-- App title -->
                             <div class="title pull-left" style="font-size: 24px;">
                                 <a href="https://registry.opendata.aws/kyfromabove/" style="text-decoration: none; color: inherit;">
-                                    KyFromAbove Open Data Explorer
+                                    AWS Open Data Explorer
                                 </a>
                             </div>
                             <!-- Bucket breadcrumbs -->
@@ -125,9 +125,9 @@ permissions and limitations under the License.
                                     </label>
                                 </div>
                                 <!-- Bucket selection -->
-                                <!-- <div class="btn-group" id="bucket">
+                                <div class="btn-group" id="bucket">
                                     <i id="bucket-chooser" style="cursor: pointer;" class="btn fa fa-folder-open fa-2x" title="Switch to a different S3 Bucket"></i>
-                                </div> -->
+                                </div>
                                 <!-- Dual purpose: progress spinner and refresh button, plus object count -->
                                 <div class="btn-group" id="refresh">
                                     <span id="bucket-loader" style="cursor: pointer;" class="btn fa fa-refresh fa-2x pull-left" title="Refresh"></span>
@@ -547,9 +547,9 @@ permissions and limitations under the License.
 
         // Click handler for bucket button (to allow user to change bucket)
         // This has been comment out because we only are giving access to one bucket
-        // $('#bucket-chooser').click(function(e) {
-        //     promptForBucketInput();
-        // });
+        $('#bucket-chooser').click(function(e) {
+            promptForBucketInput();
+        });
 
         $('#hidefolders').click(function(e) {
             $('#tb-s3objects').DataTable().draw();
